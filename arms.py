@@ -4,7 +4,6 @@ import numpy as np
 from time import time
 import mediapipe as mp
 import matplotlib.pyplot as plt
-
 mp_pose = mp.solutions.pose
 pose = mp_pose.Pose(static_image_mode=True, min_detection_confidence=0.3, model_complexity=2)
 mp_drawing = mp.solutions.drawing_utils 
@@ -83,6 +82,8 @@ camera_video.set(3,1280)
 camera_video.set(4,960)
 
 cv2.namedWindow('Pose Classification', cv2.WINDOW_NORMAL)
+caution_display_time = 0
+caution_start_time = None
 
 while camera_video.isOpened():
     ok, frame = camera_video.read()
@@ -96,13 +97,24 @@ while camera_video.isOpened():
     frame, landmarks = detectPose(frame, pose_video, display=False)
     
     if landmarks:
-        frame, _ = classifyPose(landmarks, frame, display=False)
+        frame, label = classifyPose(landmarks, frame, display=False)
+        
+        if label == 'Caution':
+            if caution_start_time is None:
+                caution_start_time = time()
+            else:
+                caution_display_time = time() - caution_start_time
+                
+                if caution_display_time >= 5:
+                    print("Hello")
+                    caution_start_time = None
+        else:
+            caution_start_time = None
     
     cv2.imshow('Pose Classification', frame)
-    
     k = cv2.waitKey(1) & 0xFF
-    
-    if(k == 27):
-            break
+    if k == 27:
+        break
+
 camera_video.release()
 cv2.destroyAllWindows()
