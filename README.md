@@ -1,10 +1,14 @@
 # CrowdEasy: Intelligent Crowd Tracking and Analysis
 
 ### Introduction
-    "Crowd Easy" represents an advanced software system tailored for metro systems. This innovative platform integrates AI/ML-driven crowd tracking, face recognition, and emergency gesture detection while offering a user-friendly mobile application for information dissemination. This holistic approach ensures passenger safety, security, and operational efficiency, fostering a seamless and secure commuting experience.
+    "Crowd Easy" represents an advanced software system tailored for metro systems. This innovative\
+    platform integrates AI/ML-driven crowd tracking, face recognition, and emergency gesture detection\ 
+    while offering a user-friendly mobile application for information dissemination. This holistic\
+    approach ensures passenger safety, security, and operational efficiency, fostering a seamless and\ 
+    secure commuting experience.
 
 ### Objective
-    The primary mission of "Crowd Easy" is to redefine the standards of safety, security, and operational efficiency within the unique context of metro transportation. It leverages state-of-the-art technologies to provide real-time crowd monitoring, facial recognition, and automated emergency gesture recognition.
+    The primary mission of "Crowd Easy" is to redefine the standards of safety, security, and\ operational efficiency within the unique context of metro transportation. It leverages\ state-of-the-art technologies to provide real-time crowd monitoring, facial recognition, and\ automated emergency gesture recognition.
 
 ### Key Features
 1. **Real-time Crowd Monitoring:** Strategically placed cameras within metro stations employ AI/ML algorithms to continuously observe crowd dynamics, movements, densities, and behavioral patterns. This real-time insight empowers operators to proactively address potential issues and optimize service delivery for passengers.
